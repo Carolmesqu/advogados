@@ -938,6 +938,31 @@
             }
         });
 
+        const contactPhone = document.getElementById('contact-phone');
+        if (contactPhone) {
+            contactPhone.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, ""); // Remove não numéricos
+                if (value.length > 11) value = value.slice(0, 11);
+
+                if (value.length > 10) {
+                    e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+                } else if (value.length > 5) {
+                    e.target.value = `(${value.slice(0, 2)}) ${value.slice(2, 6)}-${value.slice(6)}`;
+                } else if (value.length > 2) {
+                    e.target.value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+                } else if (value.length > 0) {
+                    e.target.value = `(${value}`;
+                }
+            });
+
+            // Evitar caracteres não numéricos durante a digitação
+            contactPhone.addEventListener('keypress', (e) => {
+                if (!/\d/.test(e.key)) {
+                    e.preventDefault();
+                }
+            });
+        }
+
         const contactForm = document.getElementById('contact-form');
         const formFeedback = document.getElementById('form-feedback');
         const btnSubmitForm = document.getElementById('btn-submit-form');
@@ -959,27 +984,34 @@
                 const area = document.getElementById('contact-area').value;
                 const message = document.getElementById('contact-message').value;
 
-                // Enviar os dados via requisição AJAX (JSON) para o FormSubmit.co
-                fetch('https://formsubmit.co/ajax/carolmesqu@gmail.com', {
+                // Enviar os dados via requisição AJAX para o Web3Forms (e-mails limpos e profissionais)
+                fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
                     body: JSON.stringify({
+                        // Cole aqui a sua Access Key gratuita do web3forms.com
+                        access_key: "YOUR_ACCESS_KEY_HERE", 
+                        subject: "Novo contato da Landing Page - Gonçalves & Lacerda",
+                        from_name: "Gonçalves & Lacerda Site",
                         Nome: name,
                         Email: email,
                         Telefone: phone,
                         "Área de interesse": area,
-                        Mensagem: message,
-                        _subject: "Novo contato da Landing Page - Gonçalves & Lacerda"
+                        Mensagem: message
                     })
                 })
                 .then(response => response.json())
                 .then(data => {
-                    // Exibir feedback de sucesso
-                    formFeedback.classList.remove('hidden');
-                    contactForm.reset();
+                    if (data.success) {
+                        // Exibir feedback de sucesso
+                        formFeedback.classList.remove('hidden');
+                        contactForm.reset();
+                    } else {
+                        alert("Ocorreu um erro no envio. Por favor, fale conosco pelo WhatsApp.");
+                    }
                     
                     // Restaurar botão
                     if (btnText) btnText.textContent = originalText;

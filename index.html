@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gonçalves & Lacerda Advogados Associados - Especialistas em Advocacia Trabalhista e Cível no Rio de Janeiro. Defesa estratégica com ética e excelência.">
+    <title>Gonçalves &amp; Lacerda | Advogados Associados - Advocacia Trabalhista e Cível</title>
+
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#08080A',
+                        darkCard: '#121216',
+                        darkHover: '#1B1B22',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#A37C1E',
+                            amber: '#E5C158',
+                        },
+                        graphite: '#94A3B8',
+                        lightText: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "radial-gradient(circle at top center, rgba(212, 175, 55, 0.12), transparent 60%), radial-gradient(circle at bottom right, rgba(229, 193, 88, 0.05), transparent 50%)",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Luxury Metallic Gold Text and Background Gradients */
+        .gold-metallic-text {
+            background: linear-gradient(135deg, #FFE89C 0%, #D4AF37 45%, #E5C158 70%, #A37C1E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-metallic-bg {
+            background: linear-gradient(135deg, #D4AF37 0%, #E5C158 50%, #A37C1E 100%);
+        }
+
+        .gold-metallic-bg:hover {
+            background: linear-gradient(135deg, #FFE89C 0%, #D4AF37 50%, #E5C158 100%);
+        }
+
+        .gold-border-glow {
+            box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+        }
+
+        /* Subtle Gold Frame Lines */
+        .gold-line-top {
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-darkBg text-lightText font-sans antialiased selection:bg-gold selection:text-black">
+
+    <!-- HEADER FIXO DE LUXO -->
+    <header id="main-header"
+        class="fixed top-0 left-0 w-full bg-darkBg/95 backdrop-blur-md border-b border-gold/20 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-22 py-3">
+
+                <!-- Logo Gonçalves & Lacerda -->
+                <a href="#inicio" id="nav-logo"
+                    class="flex items-center gap-3.5 group focus:outline-none focus:ring-2 focus:ring-gold rounded-lg p-1">
+                    <!-- Monograma G&L / Balança -->
+                    <div
+                        class="w-11 h-11 rounded-full bg-gradient-to-br from-darkCard to-black border-2 border-gold/60 flex items-center justify-center text-gold group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300">
+                        <span class="font-serif font-bold text-sm tracking-tighter gold-metallic-text">G&amp;L</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span
+                            class="font-serif font-bold text-lg md:text-xl tracking-wider text-white leading-tight group-hover:text-gold transition-colors duration-300">
+                            GONÇALVES <span class="gold-metallic-text font-normal">&amp;</span> LACERDA
+                        </span>
+                        <span
+                            class="text-[9px] sm:text-[10px] tracking-[0.28em] text-gold/80 uppercase font-semibold">Advogados
+                            Associados</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-8" aria-label="Navegação Principal">
+                    <a href="#inicio"
+                        class="text-sm font-medium text-white hover:text-gold transition-colors duration-200 py-1">Início</a>
+                    <a href="#sobre"
+                        class="text-sm font-medium text-slate-300 hover:text-gold transition-colors duration-200 py-1">Sobre
+                        Nós</a>
+                    <a href="#areas"
+                        class="text-sm font-medium text-slate-300 hover:text-gold transition-colors duration-200 py-1">Áreas
+                        de Atuação</a>
+                    <a href="#diferenciais"
+                        class="text-sm font-medium text-slate-300 hover:text-gold transition-colors duration-200 py-1">Diferenciais</a>
+                    <a href="#contato"
+                        class="text-sm font-medium text-slate-300 hover:text-gold transition-colors duration-200 py-1">Contato</a>
+                </nav>
+
+                <!-- Action Button & WhatsApp Header Contact (Desktop) -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <div class="text-right hidden xl:block">
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest">Atendimento RJ</p>
+                        <p class="text-xs font-semibold text-gold font-mono">(21) 2516-2425</p>
+                    </div>
+                    <a href="#contato" id="btn-header-cta"
+                        class="inline-flex items-center gap-2 gold-metallic-bg text-black font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-lg shadow-lg shadow-gold/15 hover:shadow-gold/35 transition-all duration-300 hover:-translate-y-0.5">
+                        <i data-lucide="message-square" class="w-4 h-4 text-black"></i>
+                        <span>Fale Conosco</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex lg:hidden items-center">
+                    <button id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                        aria-label="Abrir menu de navegação"
+                        class="text-slate-300 hover:text-gold p-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold border border-gold/30 bg-darkCard/80 transition-colors">
+                        <i id="menu-icon-open" data-lucide="menu" class="w-6 h-6"></i>
+                        <i id="menu-icon-close" data-lucide="x" class="w-6 h-6 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-darkCard/98 border-b border-gold/30 px-4 pt-3 pb-6 space-y-3 transition-all duration-300">
+            <nav class="flex flex-col space-y-2" aria-label="Navegação Mobile">
+                <a href="#inicio"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-white hover:text-gold hover:bg-darkHover transition-colors">Início</a>
+                <a href="#sobre"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-gold hover:bg-darkHover transition-colors">Sobre
+                    Nós</a>
+                <a href="#areas"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-gold hover:bg-darkHover transition-colors">Áreas
+                    de Atuação</a>
+                <a href="#diferenciais"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-gold hover:bg-darkHover transition-colors">Diferenciais</a>
+                <a href="#contato"
+                    class="mobile-nav-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-300 hover:text-gold hover:bg-darkHover transition-colors">Contato</a>
+            </nav>
+            <div class="pt-3 border-t border-slate-800 space-y-2">
+                <div class="text-xs text-slate-400 px-3 flex justify-between">
+                    <span>Telefone Fixo:</span>
+                    <span class="text-gold font-mono font-semibold">(21) 2516-2425</span>
+                </div>
+                <a href="https://wa.me/5521986151028" target="_blank"
+                    class="mobile-nav-link flex items-center justify-center gap-2 w-full gold-metallic-bg text-black font-semibold text-sm px-5 py-3 rounded-lg shadow-md">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Falar no WhatsApp (21) 98615-1028</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="pt-20">
+
+        <!-- HERO SECTION PREMIUM -->
+        <section id="inicio"
+            class="relative bg-darkBg text-white overflow-hidden min-h-[calc(100vh-5rem)] flex items-center py-20 lg:py-28">
+
+            <!-- Structural Decorative Background Glow -->
+            <div
+                class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gold/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div class="absolute inset-0 bg-hero-pattern opacity-70 pointer-events-none"></div>
+
+            <!-- Bevel Decorative Top Border Line -->
+            <div
+                class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-gold/40 to-transparent">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+                    <!-- Hero Content Left (Cols 1-7) -->
+                    <div class="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
+
+                        <!-- Badge -->
+                        <div
+                            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-darkCard/90 border border-gold/40 backdrop-blur-sm text-xs font-semibold text-gold">
+                            <i data-lucide="scale" class="w-4 h-4 text-gold"></i>
+                            <span class="uppercase tracking-wider">Advocacia Trabalhista &amp; Cível • Rio de
+                                Janeiro</span>
+                        </div>
+
+                        <!-- Main Headline -->
+                        <h1
+                            class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-white">
+                            Defesa estratégica dos seus direitos com <span class="gold-metallic-text">excelência</span>
+                            e tradição.
+                        </h1>
+
+                        <!-- Subtitle -->
+                        <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                            O escritório <strong>Gonçalves &amp; Lacerda Advogados Associados</strong> oferece
+                            assessoria jurídica altamente especializada nas áreas <strong>Trabalhista</strong> e
+                            <strong>Cível</strong> no Rio de Janeiro, garantindo proteção patrimonial e a defesa firme
+                            dos seus interesses.
+                        </p>
+
+                        <!-- CTA Action Buttons -->
+                        <div
+                            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
+                            <a href="#contato" id="btn-hero-cta-primary"
+                                class="inline-flex items-center justify-center gap-3 gold-metallic-bg text-black font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-xl shadow-xl shadow-gold/20 hover:shadow-gold/40 transition-all duration-300 hover:-translate-y-1">
+                                <span>Agendar Consulta Jurídica</span>
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://wa.me/5521986151028" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2.5 bg-darkCard hover:bg-darkHover text-white border border-gold/50 font-medium text-sm px-6 py-4 rounded-xl transition-all duration-300">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+                                <span>WhatsApp Direto</span>
+                            </a>
+                        </div>
+
+                        <!-- Quick Contact Bar (Phone Numbers from Client Branding) -->
+                        <div class="pt-6 border-t border-gold/20 w-full space-y-2">
+                            <p class="text-xs text-gold/80 font-semibold uppercase tracking-widest">Central de
+                                Atendimento Rápido (RJ):</p>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono text-slate-300">
+                                <a href="tel:2125162425"
+                                    class="flex items-center gap-1.5 hover:text-gold transition-colors"><i
+                                        data-lucide="phone" class="w-3.5 h-3.5 text-gold"></i>(21) 2516-2425</a>
+                                <a href="https://wa.me/5521986151028" target="_blank"
+                                    class="flex items-center gap-1.5 hover:text-gold transition-colors"><i
+                                        data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>(21)
+                                    98615-1028</a>
+                                <a href="https://wa.me/5521975244840" target="_blank"
+                                    class="flex items-center gap-1.5 hover:text-gold transition-colors"><i
+                                        data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>(21)
+                                    97524-4840</a>
+                                <a href="https://wa.me/5521993641467" target="_blank"
+                                    class="flex items-center gap-1.5 hover:text-gold transition-colors"><i
+                                        data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>(21)
+                                    99364-1467</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Hero Right Side Laurel Badge & Team Frame (Cols 8-12) -->
+                    <div class="lg:col-span-5 w-full">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+
+                            <!-- Outer Metallic Gold Ring Glow Frame -->
+                            <div
+                                class="absolute -inset-1.5 rounded-3xl bg-gradient-to-br from-gold/50 via-gold/20 to-gold/40 opacity-80 blur-md">
+                            </div>
+
+                            <!-- Main Laurel & Team Monogram Card -->
+                            <div
+                                class="relative bg-darkCard border-2 border-gold/50 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl space-y-6 text-center">
+
+                                <!-- Monogram Circular Emblem G&L -->
+                                <div
+                                    class="relative w-28 h-28 mx-auto rounded-full bg-gradient-to-b from-black to-darkCard border-2 border-gold flex flex-col items-center justify-center shadow-lg shadow-gold/20 group">
+                                    <!-- Laurel Leaf Frame -->
+                                    <div class="absolute inset-0 rounded-full border border-gold/40 animate-pulse">
+                                    </div>
+                                    <i data-lucide="scale" class="w-8 h-8 text-gold mb-1"></i>
+                                    <span
+                                        class="font-serif font-extrabold text-2xl gold-metallic-text tracking-tighter">G&amp;L</span>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <h2 class="font-serif font-bold text-2xl text-white tracking-wide">
+                                        GONÇALVES <span class="text-gold">&amp;</span> LACERDA
+                                    </h2>
+                                    <p class="text-xs text-gold/90 font-semibold tracking-widest uppercase">Advogados
+                                        Associados</p>
+                                    <div
+                                        class="inline-flex items-center gap-1.5 px-3 py-1 mt-1 rounded-full bg-gold/10 border border-gold/40 text-[11px] font-semibold text-gold">
+                                        <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                                        <span>+25 Anos de Tradição Jurídica</span>
+                                    </div>
+                                </div>
+
+                                <!-- Grid of Specialties Highlights -->
+                                <div class="grid grid-cols-2 gap-3 pt-2">
+                                    <div class="bg-black/60 p-3.5 rounded-xl border border-gold/30 text-left">
+                                        <div class="flex items-center gap-2 text-gold mb-1">
+                                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                                            <span class="font-serif font-semibold text-sm text-white">Direito
+                                                Trabalhista</span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-400 leading-snug">Defesa corporativa e direitos
+                                            dos trabalhadores.</p>
+                                    </div>
+                                    <div class="bg-black/60 p-3.5 rounded-xl border border-gold/30 text-left">
+                                        <div class="flex items-center gap-2 text-gold mb-1">
+                                            <i data-lucide="scale" class="w-4 h-4"></i>
+                                            <span class="font-serif font-semibold text-sm text-white">Direito
+                                                Cível</span>
+                                        </div>
+                                        <p class="text-[11px] text-slate-400 leading-snug">Contratos, Indenizações e
+                                            Contencioso.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Seal -->
+                                <div
+                                    class="pt-2 border-t border-slate-800 flex items-center justify-center gap-2 text-xs text-slate-300">
+                                    <i data-lucide="shield-check" class="w-4 h-4 text-gold"></i>
+                                    <span>Atendimento especializado no Estado do Rio de Janeiro</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE O ESCRITÓRIO -->
+        <section id="sobre" class="py-20 lg:py-28 bg-darkCard relative overflow-hidden border-t border-gold/20">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                    <!-- Coluna da Esquerda: Imagem da Equipe (Sem Cortes) -->
+                    <div class="lg:col-span-6 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <!-- Borda Traseira Decortiva -->
+                            <div class="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border border-gold/30 -z-10 hidden sm:block"></div>
+                            
+                            <!-- Container Principal com p-3 e bg-black -->
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gold/40 bg-gradient-to-b from-black to-darkCard p-3 group">
+                                
+                                <!-- Container da Imagem que preserva a largura total (sem cortar nas laterais) -->
+                                <div class="relative rounded-xl overflow-hidden bg-black flex items-center justify-center">
+                                    <img src="./assets/image.jpg" alt="Equipe Gonçalves &amp; Lacerda Advogados Associados"
+                                        class="w-full h-auto max-h-[460px] object-contain object-center group-hover:scale-102 transition-transform duration-500">
+                                </div>
+
+                                <!-- Selo de Tradição posicionado logo abaixo da foto (para não cobrir as pessoas) -->
+                                <div class="mt-3 bg-black/85 p-3 rounded-xl border border-gold/30 flex items-center justify-between text-white">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center text-gold border border-gold shrink-0">
+                                            <i data-lucide="award" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-serif font-semibold text-xs text-gold">Corpo Jurídico Especializado</p>
+                                            <p class="text-[11px] text-slate-300">Experiência sólida em causas Trabalhistas e Cíveis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna da Direita: Conteúdo -->
+                    <div class="lg:col-span-6 space-y-6">
+
+                        <div
+                            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/40 text-xs font-semibold text-gold uppercase tracking-wider">
+                            <i data-lucide="landmark" class="w-3.5 h-3.5"></i>
+                            <span>Sobre o Escritório</span>
+                        </div>
+
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
+                            Advocacia pautada na <span class="gold-metallic-text">ética</span>, eficiência e compromisso
+                            com o cliente.
+                        </h2>
+
+                        <p class="text-base text-slate-300 font-normal leading-relaxed">
+                            Com mais de <strong>25 anos de atuação ininterrupta</strong> no Rio de Janeiro, o escritório
+                            <strong>Gonçalves &amp; Lacerda Advogados Associados</strong> unifica a sólida vivência
+                            técnica de advogados sêniores com a agilidade de especialistas em soluções jurídicas
+                            modernas.
+                        </p>
+
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Oferecemos consultoria preventiva e contenciosa especializada nas esferas
+                            <strong>Trabalhista</strong> e <strong>Cível</strong>, priorizando a segurança patrimonial e
+                            o atendimento humanizado para cada cliente.
+                        </p>
+
+                        <!-- Diferenciais -->
+                        <div class="pt-4 space-y-3 border-t border-slate-800">
+
+                            <div
+                                class="flex items-start gap-4 p-3.5 rounded-xl bg-black/40 border border-gold/20 hover:border-gold/60 transition-colors">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-gold/20 text-gold flex items-center justify-center shrink-0 border border-gold/40">
+                                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-semibold text-white text-base">Atendimento Direto com os
+                                        Sócios</h3>
+                                    <p class="text-xs text-slate-400 mt-0.5 leading-relaxed">Acompanhamento próximo e
+                                        exclusivo em todas as instâncias do seu processo.</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-start gap-4 p-3.5 rounded-xl bg-black/40 border border-gold/20 hover:border-gold/60 transition-colors">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-gold/20 text-gold flex items-center justify-center shrink-0 border border-gold/40">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-serif font-semibold text-white text-base">Estratégia Jurídica Sob
+                                        Medida</h3>
+                                    <p class="text-xs text-slate-400 mt-0.5 leading-relaxed">Análise detalhada de riscos
+                                        para garantir o melhor resultado na Justiça Trabalhista ou Cível.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO ÁREAS DE ATUAÇÃO -->
+        <section id="areas" class="py-20 lg:py-28 bg-darkBg relative border-t border-b border-gold/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/40 text-xs font-semibold text-gold uppercase tracking-wider">
+                        <i data-lucide="scale" class="w-3.5 h-3.5 text-gold"></i>
+                        <span>Nossas Especialidades</span>
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                        Áreas de <span class="gold-metallic-text">Atuação</span>
+                    </h2>
+
+                    <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+                        Foco prioritário em Direito Trabalhista e Cível, além de suporte completo para demandas
+                        patrimoniais e familiares.
+                    </p>
+                </div>
+
+                <!-- Grid de Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1: Direito Trabalhista (Destaque Principal) -->
+                    <div
+                        class="group bg-darkCard rounded-2xl p-8 border-2 border-gold/50 shadow-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] hover:border-gold transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 bg-gold text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-bl-lg">
+                            Especialidade Principal
+                        </div>
+                        <div class="space-y-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-gold/20 text-gold flex items-center justify-center border border-gold group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                                <i data-lucide="briefcase" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors">
+                                Direito Trabalhista
+                            </h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Defesa firme de trabalhadores e consultoria preventiva corporativa em rescisões, horas
+                                extras, insalubridade e acidentes de trabalho.
+                            </p>
+                        </div>
+                        <div
+                            class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-gold">
+                            <span>Falar com especialista</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Direito Cível (Destaque Principal) -->
+                    <div
+                        class="group bg-darkCard rounded-2xl p-8 border-2 border-gold/50 shadow-xl hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] hover:border-gold transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 bg-gold text-black text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-bl-lg">
+                            Especialidade Principal
+                        </div>
+                        <div class="space-y-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-gold/20 text-gold flex items-center justify-center border border-gold group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                                <i data-lucide="scale" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors">
+                                Direito Cível &amp; Contratos
+                            </h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Ações de indenização por danos morais e materiais, cobranças, execução de títulos,
+                                elaboração e análise de contratos.
+                            </p>
+                        </div>
+                        <div
+                            class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-gold">
+                            <span>Falar com especialista</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Direito de Família -->
+                    <div
+                        class="group bg-darkCard rounded-2xl p-8 border border-gold/30 shadow-lg hover:border-gold transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-slate-800 text-gold flex items-center justify-center border border-gold/40 group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                                <i data-lucide="users" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors">
+                                Família &amp; Sucessões
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Divórcios consensuais ou litigiosos, guarda de filhos, pensão alimentícia, inventários e
+                                partilha de bens.
+                            </p>
+                        </div>
+                        <div
+                            class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-300 group-hover:text-gold">
+                            <span>Saiba mais</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Direito Imobiliário -->
+                    <div
+                        class="group bg-darkCard rounded-2xl p-8 border border-gold/30 shadow-lg hover:border-gold transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-slate-800 text-gold flex items-center justify-center border border-gold/40 group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                                <i data-lucide="home" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors">
+                                Direito Imobiliário
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Ações de despejo, usucapião, regularização de imóveis urbana e rural, contratos de
+                                locação e compra e venda.
+                            </p>
+                        </div>
+                        <div
+                            class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-300 group-hover:text-gold">
+                            <span>Saiba mais</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Direito Empresarial -->
+                    <div
+                        class="group bg-darkCard rounded-2xl p-8 border border-gold/30 shadow-lg hover:border-gold transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-slate-800 text-gold flex items-center justify-center border border-gold/40 group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                                <i data-lucide="building-2" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors">
+                                Direito Empresarial
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Assessoria para pequenas e médias empresas, elaboração de estatutos societários e
+                                cobranças judiciais.
+                            </p>
+                        </div>
+                        <div
+                            class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-300 group-hover:text-gold">
+                            <span>Saiba mais</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Direito Previdenciário -->
+                    <div
+                        class="group bg-darkCard rounded-2xl p-8 border border-gold/30 shadow-lg hover:border-gold transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-slate-800 text-gold flex items-center justify-center border border-gold/40 group-hover:bg-gold group-hover:text-black transition-colors duration-300">
+                                <i data-lucide="shield-check" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="font-serif font-bold text-xl text-white group-hover:text-gold transition-colors">
+                                Direito Previdenciário
+                            </h3>
+                            <p class="text-sm text-slate-400 leading-relaxed">
+                                Concessão e revisão de benefícios junto ao INSS, auxílio-doença, aposentadorias por
+                                tempo de contribuição ou idade.
+                            </p>
+                        </div>
+                        <div
+                            class="pt-6 mt-6 border-t border-slate-800 flex items-center justify-between text-xs font-semibold text-slate-300 group-hover:text-gold">
+                            <span>Saiba mais</span>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO E CANAIS DO CLIENTE -->
+        <section id="contato" class="py-20 lg:py-28 bg-darkCard relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/40 text-xs font-semibold text-gold uppercase tracking-wider">
+                        <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                        <span>Fale com Gonçalves &amp; Lacerda</span>
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                        Entre em <span class="gold-metallic-text">Contato</span>
+                    </h2>
+
+                    <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+                        Canais diretos de atendimento telefônico e WhatsApp para o Estado do Rio de Janeiro.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+                    <!-- Coluna da Esquerda: Telefones de Contato da Marca -->
+                    <div class="lg:col-span-5 space-y-6">
+
+                        <div
+                            class="bg-black/80 text-white p-8 rounded-2xl border-2 border-gold/40 shadow-2xl space-y-6">
+
+                            <h3
+                                class="font-serif text-xl font-bold text-gold border-b border-slate-800 pb-3 flex items-center gap-2">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                                Telefones de Atendimento (RJ)
+                            </h3>
+
+                            <!-- Lista Completa de Números do Anexo -->
+                            <div class="space-y-4">
+
+                                <!-- WhatsApp 1 -->
+                                <a href="https://wa.me/5521986151028" target="_blank"
+                                    class="flex items-center justify-between p-3.5 rounded-xl bg-darkCard border border-gold/30 hover:border-gold hover:bg-darkHover transition-all group">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/40">
+                                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-400">WhatsApp Atendimento 1</p>
+                                            <p class="font-mono font-bold text-sm text-white group-hover:text-gold">(21)
+                                                98615-1028</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+                                </a>
+
+                                <!-- WhatsApp 2 -->
+                                <a href="https://wa.me/5521975244840" target="_blank"
+                                    class="flex items-center justify-between p-3.5 rounded-xl bg-darkCard border border-gold/30 hover:border-gold hover:bg-darkHover transition-all group">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/40">
+                                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-400">WhatsApp Atendimento 2</p>
+                                            <p class="font-mono font-bold text-sm text-white group-hover:text-gold">(21)
+                                                97524-4840</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+                                </a>
+
+                                <!-- WhatsApp 3 -->
+                                <a href="https://wa.me/5521993641467" target="_blank"
+                                    class="flex items-center justify-between p-3.5 rounded-xl bg-darkCard border border-gold/30 hover:border-gold hover:bg-darkHover transition-all group">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center border border-emerald-500/40">
+                                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-400">WhatsApp Atendimento 3</p>
+                                            <p class="font-mono font-bold text-sm text-white group-hover:text-gold">(21)
+                                                99364-1467</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+                                </a>
+
+                                <!-- Telefone Fixo -->
+                                <a href="tel:2125162425"
+                                    class="flex items-center justify-between p-3.5 rounded-xl bg-darkCard border border-gold/30 hover:border-gold hover:bg-darkHover transition-all group">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-gold/20 text-gold flex items-center justify-center border border-gold/40">
+                                            <i data-lucide="phone-call" class="w-5 h-5"></i>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs text-slate-400">Telefone Fixo do Escritório</p>
+                                            <p class="font-mono font-bold text-sm text-white group-hover:text-gold">(21)
+                                                2516-2425</p>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-gold"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Coluna da Direita: Formulário de Mensagem -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-black/90 p-8 sm:p-10 rounded-2xl border-2 border-gold/30 shadow-2xl space-y-6">
+
+                            <div class="space-y-1">
+                                <h3 class="font-serif text-2xl font-bold text-white">Envie uma Mensagem Direta</h3>
+                                <p class="text-xs text-slate-400">Preencha o formulário para atendimento prioritário com
+                                    nossos advogados.</p>
+                            </div>
+
+                            <div id="form-feedback"
+                                class="hidden p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-200 text-sm flex items-center gap-3">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+                                <span>Mensagem recebida com sucesso! Nossa equipe retornará em breve.</span>
+                            </div>
+
+                            <form id="contact-form" class="space-y-4">
+                                <div>
+                                    <label for="contact-name"
+                                        class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                                        Nome Completo <span class="text-gold">*</span>
+                                    </label>
+                                    <input type="text" id="contact-name" required placeholder="Seu nome completo"
+                                        class="w-full px-4 py-3 rounded-xl bg-darkCard border border-slate-700 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-sm text-white placeholder:text-slate-500 transition-all">
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="contact-email"
+                                            class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                                            Seu E-mail <span class="text-gold">*</span>
+                                        </label>
+                                        <input type="email" id="contact-email" required
+                                            placeholder="seuemail@exemplo.com"
+                                            class="w-full px-4 py-3 rounded-xl bg-darkCard border border-slate-700 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-sm text-white placeholder:text-slate-500 transition-all">
+                                    </div>
+                                    <div>
+                                        <label for="contact-phone"
+                                            class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                                            Telefone / WhatsApp <span class="text-gold">*</span>
+                                        </label>
+                                        <input type="tel" id="contact-phone" required placeholder="(21) 99999-9999"
+                                            class="w-full px-4 py-3 rounded-xl bg-darkCard border border-slate-700 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-sm text-white placeholder:text-slate-500 transition-all">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="contact-area"
+                                        class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                                        Área da Necessidade <span class="text-gold">*</span>
+                                    </label>
+                                    <select id="contact-area" required
+                                        class="w-full px-4 py-3 rounded-xl bg-darkCard border border-slate-700 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-sm text-white transition-all">
+                                        <option value="" disabled selected>Selecione a área jurídica</option>
+                                        <option value="trabalhista">Direito Trabalhista (Reclamante ou Empresa)</option>
+                                        <option value="civil">Direito Cível &amp; Indenizações</option>
+                                        <option value="familia">Direito de Família &amp; Sucessões</option>
+                                        <option value="imobiliario">Direito Imobiliário</option>
+                                        <option value="outros">Outros Assuntos</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="contact-message"
+                                        class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+                                        Descrição Breve do Caso <span class="text-gold">*</span>
+                                    </label>
+                                    <textarea id="contact-message" rows="4" required
+                                        placeholder="Descreva os detalhes do seu caso ou dúvida..."
+                                        class="w-full px-4 py-3 rounded-xl bg-darkCard border border-slate-700 focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold text-sm text-white placeholder:text-slate-500 transition-all resize-none"></textarea>
+                                </div>
+
+                                <button type="submit" id="btn-submit-form"
+                                    class="w-full inline-flex items-center justify-center gap-3 gold-metallic-bg text-black font-bold text-sm uppercase tracking-wider py-4 rounded-xl shadow-lg shadow-gold/20 hover:shadow-gold/40 transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
+                                    <i data-lucide="send" class="w-5 h-5 text-black"></i>
+                                    <span>Enviar Mensagem aos Advogados</span>
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER ESCURO PREMIUM DE LUXO -->
+    <footer class="bg-black text-slate-400 border-t border-gold/30 pt-16 pb-12 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+
+                <div class="lg:col-span-5 space-y-4">
+                    <a href="#inicio" class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-darkCard border border-gold/60 flex items-center justify-center text-gold">
+                            <span class="font-serif font-bold text-xs gold-metallic-text">G&amp;L</span>
+                        </div>
+                        <span class="font-serif font-bold text-lg text-white tracking-wider">
+                            GONÇALVES <span class="text-gold">&amp;</span> LACERDA
+                        </span>
+                    </a>
+
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Advocacia Trabalhista e Cível. Atuação estratégica com foco na melhor solução jurídica e na
+                        defesa incansável dos direitos de nossos clientes.
+                    </p>
+
+                    <div class="pt-2 text-xs text-slate-400 space-y-1">
+                        <p class="font-semibold text-gold">Escritório no Rio de Janeiro — RJ</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-serif font-semibold text-white text-base border-b border-slate-800 pb-2">Links
+                        Rápidos</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="hover:text-gold transition-colors block py-0.5">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-gold transition-colors block py-0.5">Sobre Nós</a></li>
+                        <li><a href="#areas" class="hover:text-gold transition-colors block py-0.5">Áreas de Atuação</a>
+                        </li>
+                        <li><a href="#contato" class="hover:text-gold transition-colors block py-0.5">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="font-serif font-semibold text-white text-base border-b border-slate-800 pb-2">Contatos
+                        Rápidos (RJ)</h4>
+                    <ul class="space-y-2 text-xs font-mono text-slate-300">
+                        <li>Fixo: (21) 2516-2425</li>
+                        <li>WhatsApp: (21) 98615-1028</li>
+                        <li>WhatsApp: (21) 97524-4840</li>
+                        <li>WhatsApp: (21) 99364-1467</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Gonçalves &amp; Lacerda Advogados Associados. Todos os direitos reservados.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hover:text-slate-400 transition-colors">Termos de Uso</a>
+                    <a href="#" class="hover:text-slate-400 transition-colors">Política de Privacidade</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP DO CLIENTE -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center group">
+        <span
+            class="mr-3 bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity shadow-xl border border-gold/40 pointer-events-none hidden sm:block">
+            Falar no WhatsApp (21) 98615-1028
+        </span>
+        <span class="absolute -inset-1.5 rounded-full bg-emerald-500 opacity-65 animate-ping"></span>
+        <a href="https://wa.me/5521986151028?text=Olá,%20gostaria%20de%20falar%20com%20um%20advogado%20do%20escritório%20Gonçalves%20%26%20Lacerda."
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Conversar no WhatsApp com Gonçalves e Lacerda Advogados"
+            class="relative w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110 active:scale-95">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Integrado -->
+    <script>
+        lucide.createIcons();
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        }
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        }
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+
+        const mainHeader = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                mainHeader.classList.add('shadow-2xl', 'border-gold/40');
+            } else {
+                mainHeader.classList.remove('shadow-2xl');
+            }
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                formFeedback.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => {
+                    formFeedback.classList.add('hidden');
+                }, 6000);
+            });
+        }
+    </script>
+</body>
+
+</html>

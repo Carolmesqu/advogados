@@ -917,15 +917,62 @@
 
         const contactForm = document.getElementById('contact-form');
         const formFeedback = document.getElementById('form-feedback');
+        const btnSubmitForm = document.getElementById('btn-submit-form');
 
-        if (contactForm) {
+        if (contactForm && btnSubmitForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
-                formFeedback.classList.remove('hidden');
-                contactForm.reset();
-                setTimeout(() => {
-                    formFeedback.classList.add('hidden');
-                }, 6000);
+
+                // Estado de carregamento no botão
+                const btnText = btnSubmitForm.querySelector('span');
+                const originalText = btnText ? btnText.textContent : "Enviar mensagem aos advogados";
+                if (btnText) btnText.textContent = "Enviando mensagem...";
+                btnSubmitForm.disabled = true;
+
+                // Capturar valores digitados
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const phone = document.getElementById('contact-phone').value;
+                const area = document.getElementById('contact-area').value;
+                const message = document.getElementById('contact-message').value;
+
+                // Enviar os dados via requisição AJAX (JSON) para o FormSubmit.co
+                fetch('https://formsubmit.co/ajax/carolmesqu@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        Nome: name,
+                        Email: email,
+                        Telefone: phone,
+                        "Área de interesse": area,
+                        Mensagem: message,
+                        _subject: "Novo contato da Landing Page - Gonçalves & Lacerda"
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Exibir feedback de sucesso
+                    formFeedback.classList.remove('hidden');
+                    contactForm.reset();
+                    
+                    // Restaurar botão
+                    if (btnText) btnText.textContent = originalText;
+                    btnSubmitForm.disabled = false;
+
+                    // Ocultar mensagem de sucesso após 8 segundos
+                    setTimeout(() => {
+                        formFeedback.classList.add('hidden');
+                    }, 8000);
+                })
+                .catch(error => {
+                    console.error('Erro no envio:', error);
+                    alert("Ocorreu um erro ao enviar sua mensagem. Por favor, tente o contato direto via WhatsApp.");
+                    if (btnText) btnText.textContent = originalText;
+                    btnSubmitForm.disabled = false;
+                });
             });
         }
     </script>
